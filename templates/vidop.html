@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="output wrapper text-light" >
+    <div class="container">
+        <div class="mb-5">
+            <h2 class="title-text ">Showcase</h2>
+            <p class=" c-para text-muted">Check it out .How precise we are!!</p>
+        </div><br><br>
+            <div class="row p-4" style="background-color: rgb(19 18 18 / 80%);">
+                <h1 class="text-center text-warning " style="border-bottom: 2px solid white;">Summary</h1>
+                <div class="px-5 pb-4">{{ result }} </div>
+            </div>
+            <a href="static/summarized_file.txt" download>
+                <button type="submit" class="btn btn-warning mt-4">Download</button>
+            </a><br><br>
+            <form action="send_mail"enctype="multipart/form-data" method="POST">
+                {% csrf_token %}  
+                    <label for="comment">Enter your mail to send the summarized file</label><br>
+                    <input type="email" class="form-control mt-1" placeholder="Your Email" style="font-size: medium; width:30%!important;" name="email_id" tabindex="2"/>
+                 <br>
+            <button type="submit" class="btn btn-warning mt-4">mail</button></form>
+        </div> 
+  </section>   
+
+
+ 
+
+{% endblock %}

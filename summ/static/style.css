@@ -1,0 +1,508 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Book+Basic:ital@1&display=swap');
+html{
+    scroll-behavior: smooth;
+    font-family: 'Gentium Book Basic', serif;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: 'Gentium Book Basic', serif; 
+    letter-spacing: 1px;
+    
+}
+  
+*{
+    box-sizing:border-box;
+    font-family: 'Gentium Book Basic', serif;   
+    font-size: 18px;
+    font-weight: 500;
+}
+html,body{
+    position: relative;
+    overflow-x: hidden;
+}
+.container{
+    max-width: 1140px;
+    margin: auto;
+    overflow: hidden;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.wrapper{
+    padding: 5rem 0 5rem; 
+}
+
+.title-text {
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center!important;
+}
+
+/*----------------------------------*/
+
+header{
+    position: absolute;
+    left: 0px;
+    right: 0px;
+    z-index: 11px;
+}
+header.fixed{
+    background-color: rgba(0,0,0,0.9);
+    position: fixed; 
+    border-color: green;
+    animation: fixHeader .5s ease;
+    z-index: 11;
+}
+@keyframes fixHeader{
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0%);
+    }
+}
+div.row{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/*-----------brand------------*/
+div.brand-name a{
+    padding-left: 4rem;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 35px;
+    font-weight: 900;
+    color: white!important;
+    text-shadow:  7px 1px 15px rgb(255, 136, 0);
+    position: relative;
+    font-family: 'Satisfy', cursive;
+}
+div.brand-name a:hover{
+    color: orange!important;
+    cursor: pointer;
+}
+
+/*---------------ham----------*/
+.ham-burger .fa{
+    font-size: 30px!important;
+    height: 30px;
+    width: 35px;
+    background-color:black;
+    color:orange;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+    display: none;
+    border: none;
+    }
+    
+/*-----------nav-----------------*/
+div.mynavbar ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+div.mynavbar ul li{
+ display: inline-block;
+    padding-right: 50px;
+}
+div.mynavbar ul li a{
+    text-decoration: none;
+    line-height: 50px;
+    color: #ffffff;
+    display: block;
+    font-weight: 600;
+    position: relative;
+    font-size: 25px;
+    text-transform: uppercase!important;
+}
+header.fixed .mynavbar ul li a{
+color: #ffffff;
+}
+div.mynavbar ul li a::before{
+    content: '';
+    height: 3px;
+/*background-color:white*/
+    width: 0%;
+    position: absolute;
+    right: 0px;
+   bottom: -1px;
+   transition: all.3s ease;
+}
+div.mynavbar ul li a:hover::before{
+    width: 100%;
+    left: 0;
+}
+div.mynavbar ul li a.active::before{
+    width: 100%;
+    left: 0;   
+}
+div.mynavbar ul li a:hover,div.mynavbar ul li a.active{
+    color:orange;
+
+}
+
+/* -------home-------------- */
+
+.home{
+    background:linear-gradient(rgb(0 0 0 / 60%),rgb(0 0 0 / 60%)),
+    url(images/i1.jpg) center/cover no-repeat fixed;
+    min-height: 100vh;
+    margin-top: auto;
+    justify-items: center;
+    text-align: center;
+}
+.home .full-screen{
+    min-height: 100vh;
+}
+
+.home .home-content .blocky{
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-top: 50px;
+    padding-left: 3%;
+}
+.home .home-content{
+    flex: 0 0 100%;
+    max-width:100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items:center;
+}
+.home .blocky h1{
+    color: #ffffff;
+    margin-top: 25px;
+    margin-bottom: 35px;
+    line-height: 3.5rem;
+}
+.home .blocky button{
+    background-color: orange;
+    color:white;
+    border: 1px solid white;
+    font-size: 20px;
+}
+.home .blocky button:hover{
+    background-color:transparent;
+    color: white;
+    border: 2px solid orange;
+}
+
+/* services */
+
+.c-top{
+    text-align: center;
+    padding: 3% 0 2%;
+}
+.c-para{
+    padding: 0 20% 0;
+    text-align: center;
+}
+
+.c-col{
+    text-align: center;
+}
+.ci-text{
+    font-size: 30px;
+    font-weight: 700;
+    text-transform: capitalize;
+}
+.fa{
+    color: orange;
+    font-size: 5rem;
+    font-weight: bolder!important;
+    padding: 2rem 0 ; 
+}
+
+
+/* ---------showcase----------- */
+#food {
+    padding: 20px;
+}
+.food-container{
+    max-width: 90vw;
+    margin:0 auto;
+}
+.food-card{
+    position: relative;
+     margin: 20px 0;
+    columns: #000000;
+    overflow: hidden;
+    padding: 3px;
+    box-shadow: 1px -8px 20px 1px black;
+}
+
+#food img{
+    width: 100%;
+    min-height: 100%;
+    display: block;
+    transition: transform 2s;
+}
+.img-text{
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    text-align: center;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+.img-footer{
+    display:flex;
+    justify-content: flex-end;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+    font-size: 20px;
+    opacity: 1;
+    color: #000000;
+    transition: opacity 0.1s;
+}
+.img-text h1{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.food-card:hover img{
+    opacity: 0.1;
+    transform: scale(1.3);
+}
+.food-card:hover .img-text,
+.food-card:hover .img-footer{
+    opacity: 1;
+}
+.food-btn{
+    display: inline-block;
+    background: #000000;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 12px 32px;
+    color: #ffffff;
+    font-weight: bold;
+    border-radius: 180px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+    outline: none;
+}
+.food-btn:hover{
+    color: orange;
+    background: #ffffff;
+    border: #000000;
+    outline: none;
+}
+.fas{
+    font-size: 30px;
+}
+
+@media screen and (min-width: 576px){
+    .food-container{
+        display: grid;
+        grid-template-columns: repeat(2 , 1fr);
+        grid-column-gap:16px;
+    }
+}
+@media screen and (min-width: 992px){
+    .food-container{
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+        grid-column-gap:16px;
+    }
+}
+
+
+
+
+
+/* ----------menu-------- */
+#menu{
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+#social-icons{
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+.menu-image{
+    min-height: 80vh;
+    background: url(img2.jpg)center/cover fixed no-repeat;
+}
+.menu-text{
+    min-height: 80vh;
+    align-items: center;
+    background: orange;
+    columns: #000000;
+    padding: 40px 0;
+}
+.menu-text h1{
+    font-size: 40px;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.menu-text p{
+    margin: 20px 0;
+    line-height: 2;
+}
+.menu-text a{
+    display: inline-block;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 13px 20px;
+    border-radius: 200px;
+    font-weight: bold;
+    background: rgb(10,10,10);
+    color: orange;
+    cursor: pointer;
+    border: 2px solid #000000;
+}
+.menu-text a:hover{
+    color: orange;
+    background: #ffffff;
+    border: none;
+}
+@media screen and (min-width: 776px){
+    .menu{
+        display: flex;
+    }
+    .menu-text{
+        flex: 0 0 30%;
+    }
+    .menu-image{
+        flex:0 0 70%;
+        clip-path: polygon(0 0,100% 0,50% 100%,0 100%);
+    }
+    .menu{
+        background: orange!important;
+    }
+}
+/* output------------- */
+.output {
+    background:linear-gradient(rgb(0 0 0 / 60%),rgb(0 0 0 / 60%)),
+    url(images/i1.jpg) center/cover no-repeat fixed;
+
+}
+.output .orow{
+    justify-content: space-evenly;
+}
+
+.footer{
+    background-image: linear-gradient(#16191c,#212529eb);
+}
+.footer .footer-in{
+    padding: 50px;
+}
+
+/* ----media quieres------------- */
+@media(max-width: 1025px){
+    div.mynavbar ul li a{
+         font-size: 15px;
+     }
+     div.mynavbar ul li {
+         padding-right:50px;
+         text-align: center;
+     }
+     div.brand-name a{
+         font-size: 20px;
+     }
+     .home .home-content .blocky .title{
+         font-size: 40px;
+     }
+     .home .home-content .blocky h1{
+         font-size: 2rem;
+     }
+     .home .home-content .blocky button{
+         font-size: 18px;
+     }
+     .about .about-text .about-info{
+         font-size: 18px;
+     }
+ }
+ @media(max-width:925px){
+     header{
+         padding:15px;
+         position: fixed;
+         background-color:rgba(0,0,0,0.9) ;
+         border: none;
+         z-index: 11;
+     }
+     header .brand-name a{
+         color: white;
+         line-height: 20px;
+         text-shadow: px -4px 8px red;
+     }
+     .ham-burger .fa{
+         display: inline-block;
+     }
+     .mynavbar{
+         position: absolute;
+         background-color: rgba(0,0,0,0.9);
+         width: 100%;
+         left: 0px;
+         top: 60px;
+         padding: 15px;
+         border-top:1px solid orange ;
+       display: none;
+     }
+     .mynavbar.show{
+         display: block;
+     }
+     header .mynavbar ul li{
+         display: block;
+         margin-left: 0;
+     }
+     header .mynavbar ul li a{
+         line-height: 42px;
+         color: #ffffff;
+     }
+ }
+ @media (max-width:600px){
+    .home .home-content .blocky h1{
+        font-size: 1.5rem;
+        line-height: 28px;
+    }
+ }
+ @media (max-width:430px){
+     .home .home-content .blocky .title {
+         font-size: 25px;
+     }
+     .home .home-content .blocky h1{
+         font-size: 18px;
+     }
+ }
+ @media (max-width:376px){
+     .home .home-content .blocky .title {
+         font-size: 25px;
+     }
+     .home .home-content .blocky h1{
+         font-size: 25px;
+         
+     }
+     .home .home-content .blocky button{
+         font-size: 15px;
+         padding: 8px;
+     }
+     .about-icon .fas {
+         font-size: 40px;
+     }
+     .about .about-text .about-info {
+     font-size: 12px;
+     }
+     .about .a-hide{
+         display: none;
+     }
+     .title-text{
+         padding: 30px;
+         font-size: 30px;
+     }
+    }
+ 

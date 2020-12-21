@@ -1,0 +1,50 @@
+ {% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Contact Me</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="{% static 'register.css' %}">
+</head>
+<body>
+ 
+    <section class="container">
+        <h1 class="title">Contact Me</h1>
+        <form id="form" class="form" action="register" method="POST">
+            {% csrf_token %}
+            <ul>
+                <li>
+                    <label for="name">Your First Name:</label>
+                    <input type="text" placeholder="Your first Name"  name="f_name" tabindex="1"/>
+                </li>
+                <li>
+                    <label for="name">Your last Name:</label>
+                    <input type="text" placeholder="Your last Name"  name="l_name" tabindex="1"/>
+                </li>
+                <li>
+                    <label for="name">Your Username:</label>
+                    <input type="text" placeholder="username"  name="username" tabindex="1"/>
+                </li>
+                <li>
+                    <label for="email">Your Email:</label>
+                    <input type="email" placeholder="Your Email"  name="email" tabindex="2"/>
+                </li>
+                <li>
+                    <label for="name">password:</label>
+                    <input type="password" placeholder="password"  name="pswd" tabindex="1"/>
+                </li>
+                <li>
+                    <label for="name">Your last Name:</label>
+                    <input type="password" placeholder="Confirm password"  name="pswd2" tabindex="1"/>
+                </li>
+                
+                
+            </ul>
+            <input type="submit"/>
+        </form>
+    </section>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+     
+</body>
+</html> 

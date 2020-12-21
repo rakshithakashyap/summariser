@@ -1,0 +1,255 @@
+{% load static %}
+{% static 'images' as baseUrl %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://kit.fontawesome.com/da834d174b.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.8.1/baguetteBox.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="{% static 'style.css'%}">
+  <title>Summarizer</title>
+</head>
+
+<body>
+  <header add here>
+    <div class="container-fluid" >
+      <div class="row">
+        <div class="brand-name">
+          <a> Summarizer</a>
+        </div>
+        <div class="ham-burger">
+          <i class="fa fa-bars"></i>
+        </div>
+        <div class="mynavbar">
+          <ul>
+            <li><a href="#services" class="active">Services</a></li>
+            <li><a href="portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="accounts/register">Register</a></li>
+            <li><a href="accounts/login">Login</a></li>
+            <li><a href="text">Demo</a></li>
+          </ul>
+        </div>
+
+      </div> 
+    </div>
+  </header>
+
+  <!-- home wala---------------- -->
+  <section class="home" id="home" >
+    <div class="container">
+      <div class="row full-screen">
+        <div class="home-content">
+          <div class="blocky">
+            <h1>Welcome To Our Summarizer!</h1>
+            <h1>Valuing Your Time Always</h1>
+            <h1>Upload Any File And Get Its Summary Instantly</h1>
+            <button type="submit" class="btn btn-warning">Log In</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- service ka---------------- -->
+  <section class="service wrapper shadow " id="services" >
+    <div class="container">
+      <div class="row">
+        <div class=" container">
+          <h2 class="title-text">Services</h2>
+          <p class=" c-para text-muted">Providing you the best experience.</p>
+        </div>
+
+        <div class="col-md-3 align-self-center c-col">
+          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+          <p class="ci-text ">Text Summarizer</p>
+          <p class="ci-para text-muted">Presenting the source text into a shorter version with semantics and reduced your reading time.</p>
+        </div>
+        <div class="col-md-3 align-self-center c-col">
+          <i class="fa fa-file-audio-o" aria-hidden="true"></i>
+          <p class="ci-text ">Audio Summarizer</p>
+          <p class="ci-para text-muted pb-3">Get the summary of a speech in the form of text.</p>
+        </div>
+        <!-- <div class="col-md-3 align-self-center c-col">
+          <i class="fa fa-file-audio-o" aria-hidden="true"></i>
+          <p class="ci-text ">Audio Summarizer</p>
+          <p class="ci-para text-muted">Get the summary of a speech in the form of text</p>
+        </div> -->
+        <div class="col-md-3 align-self-center c-col pt-1">
+          <i class="fa fa-file-video-o" aria-hidden="true"></i>
+          <p class="ci-text ">Video Summarizer</p>
+          <p class="ci-para text-muted">Strive to produce a video summary for the original video in the form of text</p>
+        </div>
+        <div class="col-md-3 align-self-center c-col">
+          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+          <p class="ci-text " style="font-size: 26px;">Webpage Summarizer</p>
+          <p class="ci-para text-muted">Download the summaries as text for your research, publishing , learning and blog writing</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- showcase -->
+  <section id="food" class="food shadow ">
+    <div class="wrapper">
+      <div class="mb-5">
+        <h2 class="title-text ">showcase</h2>
+        <p class=" c-para text-muted">Check it out .How precise we are!!</p>
+      </div>
+      <div class="food-container">
+        <div class="food-card">
+          <img src="{% static 'images/i2.jpg' %}" class="food-img" alt="">
+          <div class="img-text">
+            <h1>Text Summarizer</h1>
+          </div>
+          <div class="img-footer">
+            <div class="footer-btn">
+              <a href="text"><button type="button" class="food-btn">Demo</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="{% static 'images/i3.jpg' %}" class="food-img" alt="">
+          <div class="img-text">
+            <h1>Audio Summarizer</h1>
+          </div>
+          <div class="img-footer">
+            <div class="footer-btn">
+              <a href="audio"><button type="button" class="food-btn">Demo</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="{% static 'images/i3.jpg' %}" class="food-img" alt="">
+          <div class="img-text">
+            <h1>Video Summarizer</h1>
+          </div>
+          <div class="img-footer">
+            <div class="footer-btn">
+              <a href="video"><button type="button" class="food-btn">Demo</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="{% static 'images/wiki.jpg' %}" class="food-img" alt="">
+          <div class="img-text">
+            <h1>Webpage Summarizer</h1>
+          </div>
+          <div class="img-footer">
+            <div class="footer-btn">
+              <a href="wiki"><button type="button" class="food-btn">Demo</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="{% static 'images/chat.jpg' %}" class="food-img" alt="">
+          <div class="img-text">
+            <h1>Chat Summarizer</h1>
+          </div>
+          <div class="img-footer">
+            <div class="footer-btn">
+              <a href="text"><button type="button" class="food-btn">Demo</button></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="food-card">
+          <img src="{% static 'images/medical.jpg' %}" class="food-img" alt="">
+          <div class="img-text">
+            <h1>Medical Summarizer</h1>
+          </div>
+          <div class="img-footer">
+            <div class="footer-btn">
+              <a href="audio"><button type="button" class="food-btn">Demo</button></a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  
+
+  <!-- output------------------- -->
+  <section class="output wrapper text-light">
+    <div class="container">
+      <div class="mb-5">
+        <h2 class="title-text ">showcase</h2>
+        <p class=" c-para text-muted">Check it out .How precise we are!!</p>
+      </div>
+      <div class="row orow">
+        <div class="col-md-8 col-xs-8 ">
+          <div class="form-group ">
+            <label for="comment ">Enter the text</label>
+            <textarea class="form-control " rows="7" id="comment"
+              placeholder="For example ,Good morning everyone......."></textarea>
+          </div>
+          <div class="form-group ">
+            <label for="comment">Summarized text</label>
+            <textarea class="form-control " rows="7" id="comment"></textarea>
+          </div>
+          <button type="submit" class="btn btn-warning">Get Summary</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- footer- -->
+  
+  <footer id="footer"  style="background-color: black;font-size: 15px;">
+    <div class="container">
+      <div class="row text-light ">
+        <div class="col-lg-5 col-md-4 col-xs-12 text-center mt-4">
+          <p class="text-capitalize font-weight-bold" style=" font-size: 18px;">Text Summarizer</p>
+          <div class="pt-2">©  All rights reserved.
+            <br>Designed by Nirisha, Poorvi,<br> Rakshitha, Reetushree.
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-5 col-sm-6 col-xs-6 mt-3 text-center"><p>Contact:</p>
+            <a href="#" class="text-light">Nirisha: 1by18is075@bmsit.in</a><br>
+            <a href="#" class="text-light">Poorvi: 1by18is082@bmsit.in</a><br>
+            <a href="#" class="text-light">Rakshitha: 1by18is096@bmsit.in</a><br>
+            <a href="#" class="text-light">Reetushree: 1by18is103@bmsit.in</a>
+        </div>
+        <div class=" col-lg-3 col-md-3 col-sm-6 col-xs-6 mt-3 text-center"><p>Social media</p>
+           <a href="#" class="text-light"> Twitter</a><br>
+           <a href="#" class="text-light"> Instagram</a><br>
+           <a href="#" class="text-light"> Facebook</a><br>
+           <a href="#" class="text-light"> LinkedIn</a>
+          </div>
+      </div>
+    </div><!-- copyright kaaa -->
+    <div class="row text-center" style="justify-content: center;">
+        <div class="col-md-12 "><br><br>
+            <p>Copyright &copy;All Rights Reserved </a></p>
+        </div>
+    </div>
+  </footer>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+    crossorigin="anonymous"></script>
+  <script type="text/javascript" src="{% static 'jsindex.js' %}"></script>
+</body>
+
+</html>

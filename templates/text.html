@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<!--input and output kaaaa -->
+<section class="output wrapper text-light">
+  <div class="container">
+      <div class="mb-5">
+          <h2 class="title-text ">Showcase</h2>
+          <p class=" c-para text-muted">Check it out .How precise we are!!</p>
+      </div><br><br>
+      <div class="row orow">
+          <div class="col-md-8 col-xs-8 a-output " style="background-color: rgb(10 10 10 / 54%);     border: 1px solid white;   padding: 50px 0px 80px 80px;">
+              
+<form action="textop" enctype="multipart/form-data" method="POST">
+  {% csrf_token %}
+                  <h2 class="mb-3" style="border-bottom: 1px dashed white;">Upload the file<h2>
+
+                  <label for="audio" class="mt-5">Select a text file of type .txt:</label><br>
+                  <input type="file" id="audio" name="file" accept=".txt" class="mb-4" style="font-size: medium;"><br>
+                  <label for="sent">Number of sentences in the output</label><br>
+                    <input type="number" value="5" class="form-control mt-1"  name="sent_no"  style="font-size: medium; width:80%!important;" /><br>
+             
+              <button type="submit" class="btn btn-warning mt-4">Get Summary</button> </form>
+              
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+
+{% endblock %}
